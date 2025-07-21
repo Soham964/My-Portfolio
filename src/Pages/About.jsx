@@ -143,7 +143,7 @@ const AboutPage = () => {
     return {
       totalProjects: 3,
       totalCertificates: 9,
-      YearExperience: 0,
+      YearExperience: "<1",
     };
   }, []);
 
