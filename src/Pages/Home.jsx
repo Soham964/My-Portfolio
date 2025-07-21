@@ -277,7 +277,7 @@ const Home = () => {
                   style={{
                     maxWidth: '400px',
                     maxHeight: '400px',
-                    imageRendering: 'crisp-edges'
+                    imageRendering: 'auto'
                   }}
                 />
               </div>
