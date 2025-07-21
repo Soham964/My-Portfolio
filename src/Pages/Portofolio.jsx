@@ -223,12 +223,12 @@ export const staticProjects = [
   },
   {
     id: "3",
-    Title: "AgentX",
+    Title: "Agent77",
     Description:
       "Full-stack intelligent HR assistant that automates and simplifies the entire hiring pipeline—from sourcing to interview scheduling—using AI agents and modern web tech.",
     Img: "/AgentX_phto.png",
     Video: "/AgentX_video.mp4",
-    Link: "",
+    Link: "#",
     Github: "https://github.com/SohamDatta/AI-HR-Assistant",
     TechStack: ["React", "MongoDB", "Tailwind CSS", "NodeJS", "JWT", "Nodemon", "Firebase Authentication", "Ollama", "PyPDF2"],
     Features: [
