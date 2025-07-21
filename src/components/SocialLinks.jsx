@@ -22,9 +22,9 @@ const socialLinks = [
   {
     name: "Instagram",
     displayName: "Instagram",
-    subText: "@soham_datta",
+    subText: "@_dsoham_",
     icon: Instagram,
-    url: "https://www.instagram.com/soham_datta/",
+    url: "https://www.instagram.com/_dsoham_/",
     color: "#E4405F",
     gradient: "from-[#833AB4] via-[#E4405F] to-[#FCAF45]"
   },

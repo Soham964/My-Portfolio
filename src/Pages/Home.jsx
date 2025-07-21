@@ -104,7 +104,7 @@ const TECH_STACK = [];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Soham964" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/soham-datta-a70149246/" },
-  { icon: Instagram, link: "https://www.instagram.com/soham_datta/" },
+  { icon: Instagram, link: "https://www.instagram.com/_dsoham_/" },
 ];
 
 const Home = () => {
