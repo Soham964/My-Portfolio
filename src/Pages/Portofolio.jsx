@@ -101,17 +101,16 @@ function a11yProps(index) {
 }
 
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
   { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", language: "Python" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", language: "Java" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", language: "C" },
   { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "c++.svg", language: "C++" },
-  { icon: "python.svg", language: "Python" },
-  { icon: "sql.svg", language: "SQL" },
-  { icon: "mongodb.svg", language: "MongoDB" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", language: "MongoDB" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", language: "PostgreSQL" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", language: "Docker" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", language: "AWS" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg", language: "Kubernetes" },
 ];
 
 const staticCertificates = [
@@ -192,34 +191,37 @@ const staticCertificates = [
 export const staticProjects = [
   {
     id: "1",
-    Title: "e-Commerce Website \"OREBI\"",
-    Description: "A modern e-commerce platform built with React and Tailwind CSS, featuring product browsing, cart management, and secure checkout.",
-    Img: "/projectimg.png",
-    Link: "https://orebishopping.vercel.app/",
-    Github: "https://github.com/Susovan12/IPM--OREBI",
-    TechStack: ["React", "Tailwind CSS", "JavaScript", "HTML"],
+    Title: "VillageStay",
+    Description: "A comprehensive hotel booking platform that connects travelers with unique village accommodations, featuring real-time availability, secure payments, and personalized recommendations.",
+    Img: "/VillageStay.jpg",
+    Link: "https://villagestay.vercel.app/",
+    Github: "https://github.com/SohamDatta/VillageStay",
+    TechStack: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "Tailwind CSS"],
     Features: [
-      "Product browsing and filtering",
-      "Shopping cart management",
-      "Secure checkout process",
-      "Responsive design"
+      "Real-time hotel availability and booking",
+      "Secure payment gateway integration",
+      "User authentication and profiles",
+      "Responsive design for all devices",
+      "Advanced search and filtering",
+      "Personalized accommodation recommendations"
     ]
   },
   {
     id: "2",
-    Title: "AI-Powered Linked-In Profile Auditor",
-    Description: "This AI-based web application helps users audit their professional profiles, analyze grammar and clarity, and get improvement suggestions instantly.",
-    Img: "/abc.png",
+    Title: "PizzaPal",
+    Description: "A Java Swing GUI application designed for pizza ordering with dynamic cost calculation, comprehensive topping selection, and robust order processing system capable of handling high-volume transactions.",
+    Img: "/PizzaPal.png",
     Video: "/ProfileAuditor.mp4",
-    Link: "https://ai-powered-profile-auditor-fb.streamlit.app/",
-    Github: "https://github.com/Susovan12/AI-Powered-Profile-Auditor",
-    TechStack: ["Python", "MongoDB", "Streamlit", "OpenAI API", "PyPDF2", "Fake UserAgent"],
+    Link: "https://github.com/SohamDatta/PizzaPal",
+    Github: "https://github.com/SohamDatta/PizzaPal",
+    TechStack: ["Java", "JDBC", "Swing", "MySQL"],
     Features: [
-      "Real-time grammar and writing analysis using LanguageTool.",
-      "Actionable insights to polish your professional presence.",
-      "Resume & Cover Letter Generator — create job-ready documents in seconds",
-      "Clean and responsive user interface",
-      "Fully deployed on Streamlit Cloud"
+      "Easy-to-use GUI for pizza size selection and 20+ toppings modification",
+      "Real-time dynamic cost calculation and itemized billing",
+      "High-performance order processing supporting up to 200 orders/minute",
+      "JDBC integration with MySQL for storing 10,000+ order records",
+      "Order history tracking and topping analytics",
+      "90% improvement in order accuracy through enhanced cost calculations"
     ]
   },
   {
@@ -229,8 +231,8 @@ export const staticProjects = [
       "Full-stack intelligent HR assistant that automates and simplifies the entire hiring pipeline—from sourcing to interview scheduling—using AI agents and modern web tech.",
     Img: "/AgentX_phto.png",
     Video: "/AgentX_video.mp4",
-    Link: "https://www.linkedin.com/posts/susovan-patra-556326286_collegeproject-ai-hrtech-activity-7337740861843079168-mBo_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEV1kZIBWd9QIMtQef6h7pRc7DzvXnePMhU",
-    Github: "https://github.com/Susovan12/AI-HR-Assistant",
+    Link: "https://www.linkedin.com/in/soham-datta/",
+    Github: "https://github.com/SohamDatta/AI-HR-Assistant",
     TechStack: ["React", "MongoDB", "Tailwind CSS", "NodeJS", "JWT", "Nodemon", "Firebase Authentication", "Ollama", "PyPDF2"],
     Features: [
       "Sourcing Agent – finds and filters talent from platforms",
@@ -299,10 +301,10 @@ export default function FullWidthTabs() {
     <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
       {/* Header section - unchanged */}
       <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
-        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#06b6d4]">
           <span style={{
-            color: '#6366f1',
-            backgroundImage: 'linear-gradient(45deg, #6366f1 10%, #a855f7 93%)',
+            color: '#10b981',
+            backgroundImage: 'linear-gradient(45deg, #10b981 10%, #06b6d4 93%)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
@@ -462,7 +464,7 @@ export default function FullWidthTabs() {
 
           <TabPanel value={value} index={2} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 lg:gap-8 gap-5 justify-items-center">
                 {techStacks.map((stack, index) => (
                   <div
                     key={index}

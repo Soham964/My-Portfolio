@@ -249,9 +249,9 @@ const Certificate = ({ certificate }) => {
 								startIcon={<LinkIcon />}
 								sx={{
 									mt: 2,
-									bgcolor: "#6366f1",
+									bgcolor: "#10b981",
 									"&:hover": {
-										bgcolor: "#a855f7",
+										bgcolor: "#06b6d4",
 									},
 								}}>
 								View Credential

@@ -4,41 +4,103 @@ import { Code2, Github, Globe, User } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const TypewriterEffect = ({ text }) => {
-  const [displayText, setDisplayText] = useState("");
+const FunkyLoadingBar = () => {
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    let index = 0;
     const timer = setInterval(() => {
-      if (index <= text.length) {
-        setDisplayText(text.slice(0, index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 260);
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
+        return prev + Math.random() * 15 + 5; // Random increment for funky effect
+      });
+    }, 200);
 
     return () => clearInterval(timer);
-  }, [text]);
+  }, []);
 
   return (
-    <span className="inline-block">
-      {displayText}
-      <span className="animate-pulse">|</span>
-    </span>
+    <div className="w-full max-w-md mx-auto">
+      {/* Loading Text */}
+      <div className="text-center mb-4">
+        <span className="text-lg sm:text-xl bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-medium">
+          Loading Portfolio... {Math.round(progress)}%
+        </span>
+      </div>
+      
+      {/* Main Progress Bar */}
+      <div className="relative">
+        {/* Background Bar */}
+        <div className="h-3 bg-gray-800/50 rounded-full border border-white/10 backdrop-blur-sm overflow-hidden">
+          {/* Progress Fill */}
+          <motion.div
+            className="h-full rounded-full relative overflow-hidden"
+            style={{
+              background: `linear-gradient(90deg, 
+                #10b981 0%, 
+                #06b6d4 50%, 
+                #10b981 100%)`,
+              backgroundSize: '200% 100%',
+            }}
+            initial={{ width: 0 }}
+            animate={{ 
+              width: `${Math.min(progress, 100)}%`,
+              backgroundPosition: ['0% 0%', '100% 0%']
+            }}
+            transition={{ 
+              width: { duration: 0.3, ease: "easeOut" },
+              backgroundPosition: { duration: 2, repeat: Infinity, ease: "linear" }
+            }}
+          >
+            {/* Animated Shimmer */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-shimmer" />
+          </motion.div>
+        </div>
+        
+        {/* Glow Effect */}
+        <div 
+          className="absolute -inset-1 rounded-full blur-sm opacity-50 transition-opacity duration-300"
+          style={{
+            background: `linear-gradient(90deg, #10b981, #06b6d4)`,
+            width: `${Math.min(progress, 100)}%`,
+          }}
+        />
+      </div>
+      
+      {/* Fun Loading Dots */}
+      <div className="flex justify-center mt-4 space-x-2">
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className="w-2 h-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.3,
+            }}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 blur-3xl animate-pulse" />
-    <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600/10 via-transparent to-purple-600/10 blur-2xl animate-float" />
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 blur-3xl animate-pulse" />
+    <div className="absolute inset-0 bg-gradient-to-tr from-emerald-600/10 via-transparent to-cyan-600/10 blur-2xl animate-float" />
   </div>
 );
 
 const IconButton = ({ Icon }) => (
   <div className="relative group hover:scale-110 transition-transform duration-300">
-    <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
+    <div className="absolute -inset-2 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
     <div className="relative p-2 sm:p-3 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
       <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
     </div>
@@ -130,21 +192,21 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                     <span
                       data-aos="fade-right"
                       data-aos-delay="200"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-emerald-100 to-cyan-200 bg-clip-text text-transparent"
                     >
                       Welcome
                     </span>{" "}
                     <span
                       data-aos="fade-right"
                       data-aos-delay="400"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-emerald-100 to-cyan-200 bg-clip-text text-transparent"
                     >
                       To
                     </span>{" "}
                     <span
                       data-aos="fade-right"
                       data-aos-delay="600"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-emerald-100 to-cyan-200 bg-clip-text text-transparent"
                     >
                       My
                     </span>
@@ -153,42 +215,22 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                     <span
                       data-aos="fade-up"
                       data-aos-delay="800"
-                      className="inline-block px-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent"
                     >
                       Portfolio
-                    </span>{" "}
-                    <span
-                      data-aos="fade-up"
-                      data-aos-delay="1000"
-                      className="inline-block px-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-                    >
-                      Website
                     </span>
                   </div>
                 </h1>
               </motion.div>
 
-              {/* Website Link */}
+              {/* Funky Loading Bar */}
               <motion.div
-                className="text-center"
+                className="flex justify-center"
                 variants={childVariants}
                 data-aos="fade-up"
                 data-aos-delay="1200"
               >
-                <a
-                  href="https://www.abc.com/"
-                  className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full relative group hover:scale-105 transition-transform duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
-                  <div className="relative flex items-center gap-2 text-lg sm:text-xl md:text-2xl">
-                    <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600" />
-                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                      <TypewriterEffect text="www.susovanpatra.com" />
-                    </span>
-                  </div>
-                </a>
+                <FunkyLoadingBar />
               </motion.div>
             </div>
           </div>

@@ -14,7 +14,7 @@ const socialLinks = [
     displayName: "Let's Connect",
     subText: "on LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/susovan-patra-556326286/",
+    url: "https://www.linkedin.com/in/soham-datta/",
     color: "#0A66C2",
     gradient: "from-[#0A66C2] to-[#0077B5]",
     isPrimary: true
@@ -22,36 +22,36 @@ const socialLinks = [
   {
     name: "Instagram",
     displayName: "Instagram",
-    subText: "@____susovan____",
+    subText: "@soham_datta",
     icon: Instagram,
-    url: "https://www.instagram.com/____susovan____/",
+    url: "https://www.instagram.com/soham_datta/",
     color: "#E4405F",
     gradient: "from-[#833AB4] via-[#E4405F] to-[#FCAF45]"
   },
   {
     name: "Twitter",
     displayName: "Twitter",
-    subText: "@Pat90988Patra",
+    subText: "@soham_datta",
     icon: Twitter,
-    url: "https://x.com/Pat90988Patra",
+    url: "https://x.com/soham_datta",
     color: "#1DA1F2",
     gradient: "from-[#1DA1F2] to-[#147DD5]"
   },
   {
     name: "Facebook",
     displayName: "Facebook",
-    subText: "/susovanpatra",
+    subText: "/sohamdatta",
     icon: Facebook,
-    url: "https://www.facebook.com/share/1AYCBFN1db/?mibextid=wwXIfr",
+    url: "https://www.facebook.com/soham.datta",
     color: "#1877F2",
     gradient: "from-[#1877F2] to-[#0A5DDA]"
   },
   {
     name: "GitHub",
     displayName: "Github",
-    subText: "@Susovan12",
+    subText: "@SohamDatta",
     icon: Github,
-    url: "https://github.com/Susovan12",
+    url: "https://github.com/SohamDatta",
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]"
   }

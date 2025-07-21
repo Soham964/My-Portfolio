@@ -16,7 +16,7 @@ const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
     <div className="inline-block relative group">
       <h2
-        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]"
+        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#06b6d4]"
         data-aos="zoom-in-up"
         data-aos-duration="600"
       >
@@ -53,9 +53,9 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
 
           <img
-            src="/Photo.png"
-            alt="Profile"
-            className="w-full h-full object-cover" style={{ objectPosition: '50% 0%' }} loading="lazy"
+            src="/121798818.jpeg"
+            alt="Soham Datta Profile"
+            className="w-full h-full object-cover" style={{ objectPosition: '50% 20%' }} loading="lazy"
           />
 
           {/* Advanced hover effects - desktop only */}
@@ -176,7 +176,7 @@ const AboutPage = () => {
     () => [
       {
         icon: Code,
-        color: "from-[#6366f1] to-[#a855f7]",
+        color: "from-[#10b981] to-[#06b6d4]",
         value: totalProjects,
         label: "Total Projects",
         description: "Innovative web solutions crafted",
@@ -184,7 +184,7 @@ const AboutPage = () => {
       },
       {
         icon: Award,
-        color: "from-[#a855f7] to-[#6366f1]",
+        color: "from-[#06b6d4] to-[#10b981]",
         value: totalCertificates,
         label: "Certificates",
         description: "Professional skills validated",
@@ -192,7 +192,7 @@ const AboutPage = () => {
       },
       {
         icon: Globe,
-        color: "from-[#6366f1] to-[#a855f7]",
+        color: "from-[#10b981] to-[#06b6d4]",
         value: YearExperience,
         label: "Years of Experience",
         description: "Continuous learning journey",
@@ -217,7 +217,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#06b6d4]">
                 Hello, I'm
               </span>
               <span
@@ -225,7 +225,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                Susovan Patra
+                Soham Datta
               </span>
             </h2>
 
@@ -234,11 +234,11 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              Highly motivated Computer Science student with strong problem-solving and coding skills in Python, DSA, Java, C, C++, SQL, Networking, Artificial Intelligence and Cloud Computing. Eager to contribute to innovative projects and grow within a challenging and dynamic environment. Seeking a challenging role where I can leverage my technical expertise and contribute to cutting-edge technologies.
+              Passionate Computer Science engineer with expertise in full-stack development, cloud technologies, and modern web frameworks. Experienced in building scalable applications using React, Node.js, Python, and cloud platforms. Dedicated to creating innovative digital solutions and staying at the forefront of emerging technologies. Always eager to tackle complex challenges and deliver exceptional user experiences.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://github.com/Susovan12" target="_blank" rel="noopener noreferrer" className="w-full lg:w-auto">
+              <a href="https://github.com/SohamDatta" target="_blank" rel="noopener noreferrer" className="w-full lg:w-auto">
                 <button
                   data-aos="fade-up"
                   data-aos-duration="700"
@@ -249,7 +249,7 @@ const AboutPage = () => {
                 </button>
               </a>
               <a
-                href="/Susovan _resume_orignal.pdf"
+                href="https://drive.google.com/file/d/1WWUhLT5XIx9CpVN1j9B0FMK-9fQdCIl0/view?usp=sharing"
                 className="w-full lg:w-auto"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -257,7 +257,7 @@ const AboutPage = () => {
                 <button
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#10b981] to-[#06b6d4] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
                 >
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                 </button>
