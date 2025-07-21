@@ -2,8 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import { db, collection } from "../firebase";
 import { getDocs } from "firebase/firestore";
 import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
-import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -116,109 +114,96 @@ const techStacks = [
 const staticCertificates = [
   {
     id: "cert1",
-    Title: "My Coursera Certificate",
-    PDF: "/My_Certificate_1.pdf", // Path to your PDF in the public folder
-    Link: "https://coursera.org/share/0ea2d24072daeb249f2a357c6212cb92",
-    Description: "Successfully completed the AWS Fundamentals Specialization, gaining proficiency in essential AWS cloud concepts, services, security, and strategies for migrating and deploying applications. This specialization included courses on AWS Cloud Technical Essentials, Migrating to the AWS Cloud, and Architecting Solutions on AWS.",
-    Date: "June 2025"
+    Title: "Google Cybersecurity Professional Certificate",
+    PDF: "/GOOGLE_CYBER.pdf",
+    Link: "",
+    Description: "Google Cybersecurity Professional Certificate covering essential cybersecurity skills including threat detection, incident response, risk management, and network security. Comprehensive training in cybersecurity frameworks, tools, and best practices.",
+    Date: "2025"
   },
   {
     id: "cert2",
-    Title: "My_Certificate_2",
-    PDF: "/My_Certificate_2.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/88ed2334c45f25f741b28e82ae211ef1",
-    Description: "Completed 'Supervised Machine Learning: Regression' from IBM, covering predictive modeling, regression analysis, feature engineering, and various machine learning algorithms. Gained skills in Performance Metrics, Scikit Learn, Statistical Modeling, and Classification and Regression Trees.",
-    Date: "June 2025"
+    Title: "Google Generative AI Certificate",
+    PDF: "/GOOGLE_GENAI.pdf",
+    Link: "",
+    Description: "Google Generative AI Certificate focusing on modern AI technologies, large language models, prompt engineering, and responsible AI development. Covers practical applications of generative AI in real-world scenarios.",
+    Date: "2025"
   },
   {
     id: "cert3",
-    Title: "My_Certificate_3",
-    PDF: "/My_Certificate_3.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/6d2888e339a86c3e4be0a92e5c530936",
-    Description: "Completed 'Foundations of Cybersecurity' from Google, covering core skills and knowledge for cybersecurity analysts, security ethics, and common tools. Gained skills in Security Management, Cyber Attacks, Data Ethics, and Incident Response.",
-    Date: "March 2025"
+    Title: "IBM Artificial Intelligence Certificate",
+    PDF: "/IBM_AI.pdf",
+    Link: "",
+    Description: "IBM Artificial Intelligence Certificate covering machine learning fundamentals, neural networks, deep learning frameworks, and AI application development. Comprehensive training in AI tools and methodologies.",
+    Date: "2024"
   },
   {
     id: "cert4",
-    Title: "Introduction to the Internet of Things and Embedded Systems",
-    PDF: "/My_Certificate_4.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/69fe73e0ffc4daf0ada45c09380ee423",
-    Description: "Successfully completed 'Introduction to the Internet of Things and Embedded Systems' from the University of California, Irvine. Gained skills in Emerging Technologies, IoT, Embedded Systems, Computer Hardware, Operating Systems, Wireless Networks, and Network Protocols.",
-    Date: "March 2023"
+    Title: "IBM DevOps Certificate",
+    PDF: "/IBM_DEVOPS.pdf",
+    Link: "",
+    Description: "IBM DevOps Certificate focusing on continuous integration/continuous deployment, containerization, infrastructure automation, and modern software development practices. Covers Docker, Kubernetes, and cloud deployment strategies.",
+    Date: "2024"
   },
   {
     id: "cert5",
-    Title: "Exploratory Data Analysis for Machine Learning",
-    PDF: "/My_Certificate_5.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/398f30d9fea8137daf5d45a6e806aed1",
-    Description: "Completed 'Exploratory Data Analysis for Machine Learning' from IBM, focusing on data analysis, manipulation, quality, and statistical methods. Gained skills in Probability & Statistics, Hypothesis Testing, and using Pandas with Jupyter for EDA in Machine Learning.",
-    Date: "January 2023"
+    Title: "IBM Machine Learning Certificate",
+    PDF: "/IBM_ML.pdf",
+    Link: "",
+    Description: "IBM Machine Learning Certificate covering supervised and unsupervised learning, regression analysis, classification algorithms, model evaluation, and data preprocessing techniques. Practical experience with Python and ML libraries.",
+    Date: "2024"
   },
   {
     id: "cert6",
-    Title: "Introduction to Artificial Intelligence (AI)",
-    PDF: "/My_Certificate_6.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/e922456242bd55b39d61a3e52dd0a909",
-    Description: "Completed 'Introduction to Artificial Intelligence (AI)' from IBM, covering fundamental AI concepts, machine learning, deep learning, neural networks, and generative AI applications, including ethical considerations.",
-    Date: "January 2023"
+    Title: "National University of Singapore Certificate",
+    PDF: "/NUS.pdf",
+    Link: "",
+    Description: "National University of Singapore certificate for advanced coursework in artificial intelligence, IoT, machine learning, and data analytics. Study abroad program completion demonstrating international academic excellence.",
+    Date: "2023"
   },
   {
     id: "cert7",
-    Title: "Full Stack Web Development",
-    PDF: "/My_Certificate_77.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "", // No URL provided
-    Description: "Successfully completed internship on Full Stack Web Development of 60 hours from 01/01/2025 to 30/03/2025. During the training and internship the student was found hardworking, dedicated and diligent.",
-    Date: "February 2023"
-  },
-  {
-    id: "cert8",
-    Title: "SMART Maker Festival 2023 Participation",
-    PDF: "/My_Certificate_8.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "", // No URL provided
-    Description: "Participation in SMART Maker Festival 2023, organized by Society for Makers, Artists, Researchers & Technologists at IEM Management House from 14th January to 15th January 2023.",
-    Date: "January 2023"
-  },
-  {
-    id: "cert9",
-    Title: "SMART SOCIETY CERTIFICATE OF COURSE COMPLETION",
-    PDF: "/My_Certificate_9.pdf", // Updated to use PDF file
-    Link: "", // No URL provided
-    Description: "Successfully completed the Smart Society Certificate of Course Completion for the Study Abroad Program on 'Artificial Intelligence, Internet of Things, Machine Learning & Data Analytics' - Fundamentals at National University of Singapore.",
-    Date: "July 2023"
+    Title: "University of Calcutta Certificate",
+    PDF: "/UOC.pdf",
+    Link: "",
+    Description: "University of Calcutta academic certificate demonstrating successful completion of coursework in computer science and technology. Recognized qualification from one of India's premier educational institutions.",
+    Date: "2024"
   }
 ];
 
 export const staticProjects = [
   {
     id: "1",
-    Title: "e-Commerce Website \"OREBI\"",
-    Description: "A modern e-commerce platform built with React and Tailwind CSS, featuring product browsing, cart management, and secure checkout.",
-    Img: "/projectimg.png",
-    Link: "https://orebishopping.vercel.app/",
-    Github: "https://github.com/SohamDatta/IPM--OREBI",
-    TechStack: ["React", "Tailwind CSS", "JavaScript", "HTML"],
+    Title: "VillageStay",
+    Description: "A comprehensive hotel booking platform that connects travelers with unique village accommodations, featuring real-time availability, secure payments, and personalized recommendations.",
+    Img: "/VillageStay.jpg",
+    Link: "https://villagestay.vercel.app/",
+    Github: "https://github.com/SohamDatta/VillageStay",
+    TechStack: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "Tailwind CSS"],
     Features: [
-      "Product browsing and filtering",
-      "Shopping cart management",
-      "Secure checkout process",
-      "Responsive design"
+      "Real-time hotel availability and booking",
+      "Secure payment gateway integration",
+      "User authentication and profiles",
+      "Responsive design for all devices",
+      "Advanced search and filtering",
+      "Personalized accommodation recommendations"
     ]
   },
   {
     id: "2",
-    Title: "AI-Powered Linked-In Profile Auditor",
-    Description: "This AI-based web application helps users audit their professional profiles, analyze grammar and clarity, and get improvement suggestions instantly.",
-    Img: "/abc.png",
+    Title: "PizzaPal",
+    Description: "A Java Swing GUI application designed for pizza ordering with dynamic cost calculation, comprehensive topping selection, and robust order processing system capable of handling high-volume transactions.",
+    Img: "/PizzaPal.png",
     Video: "/ProfileAuditor.mp4",
-    Link: "https://ai-powered-profile-auditor-fb.streamlit.app/",
-    Github: "https://github.com/SohamDatta/AI-Powered-Profile-Auditor",
-    TechStack: ["Python", "MongoDB", "Streamlit", "OpenAI API", "PyPDF2", "Fake UserAgent"],
+    Link: "https://github.com/SohamDatta/PizzaPal",
+    Github: "https://github.com/SohamDatta/PizzaPal",
+    TechStack: ["Java", "JDBC", "Swing", "MySQL"],
     Features: [
-      "Real-time grammar and writing analysis using LanguageTool.",
-      "Actionable insights to polish your professional presence.",
-      "Resume & Cover Letter Generator — create job-ready documents in seconds",
-      "Clean and responsive user interface",
-      "Fully deployed on Streamlit Cloud"
+      "Easy-to-use GUI for pizza size selection and 20+ toppings modification",
+      "Real-time dynamic cost calculation and itemized billing",
+      "High-performance order processing supporting up to 200 orders/minute",
+      "JDBC integration with MySQL for storing 10,000+ order records",
+      "Order history tracking and topping analytics",
+      "90% improvement in order accuracy through enhanced cost calculations"
     ]
   },
   {
@@ -228,8 +213,8 @@ export const staticProjects = [
       "Full-stack intelligent HR assistant that automates and simplifies the entire hiring pipeline—from sourcing to interview scheduling—using AI agents and modern web tech.",
     Img: "/AgentX_phto.png",
     Video: "/AgentX_video.mp4",
-    Link: "#",
-    Github: "https://github.com/SohamDatta/AI-HR-Assistant",
+    Link: "DISABLED",
+    Github: "https://github.com/Soham964/Agent77",
     TechStack: ["React", "MongoDB", "Tailwind CSS", "NodeJS", "JWT", "Nodemon", "Firebase Authentication", "Ollama", "PyPDF2"],
     Features: [
       "Sourcing Agent – finds and filters talent from platforms",
@@ -258,7 +243,6 @@ export const staticProjects = [
 ];
 
 export default function FullWidthTabs() {
-  const theme = useTheme();
   const [value, setValue] = useState(0);
   const [projects] = useState(staticProjects);
   const [certificates, setCertificates] = useState(staticCertificates);
@@ -403,78 +387,73 @@ export default function FullWidthTabs() {
           </Tabs>
         </AppBar>
 
-        <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={value}
-          onChangeIndex={setValue}
-        >
-          <TabPanel value={value} index={0} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {displayedProjects.map((project, index) => (
-                  <div
-                    key={project.id || index}
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay={index * 100}
-                    data-aos-easing="ease-out-cubic"
-                  >
-                    <CardProject
-                      Img={project.Img}
-                      Video={project.Video}
-                      Title={project.Title}
-                      Description={project.Description}
-                      Link={project.Link}
-                      id={project.id}
-                    />
-                  </div>
-                ))}
-              </div>
+        {/* Tab Content */}
+        <TabPanel value={value} index={0}>
+          <div className="container mx-auto flex justify-center items-center overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {displayedProjects.map((project, index) => (
+                <div
+                  key={project.id || index}
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay={index * 100}
+                  data-aos-easing="ease-out-cubic"
+                >
+                  <CardProject
+                    Img={project.Img}
+                    Video={project.Video}
+                    Title={project.Title}
+                    Description={project.Description}
+                    Link={project.Link}
+                    id={project.id}
+                  />
+                </div>
+              ))}
             </div>
-          </TabPanel>
+          </div>
+        </TabPanel>
 
-          <TabPanel value={value} index={1} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-                {displayedCertificates.map((certificate, index) => (
-                  <div
-                    key={index}
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay={index * 100}
-                    data-aos-easing="ease-out-cubic"
-                  >
-                    <Certificate certificate={certificate} />
-                  </div>
-                ))}
-              </div>
+        <TabPanel value={value} index={1}>
+          <div className="container mx-auto flex justify-center items-center overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+              {displayedCertificates.map((certificate, index) => (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay={index * 100}
+                  data-aos-easing="ease-out-cubic"
+                >
+                  <Certificate certificate={certificate} />
+                </div>
+              ))}
             </div>
-            {certificates.length > initialCertificates && (
-              <div className="mt-8 flex justify-center">
-                <ToggleButton
-                  onClick={() => toggleShowMore('certificates')}
-                  isShowingMore={showAllCertificates}
-                />
-              </div>
-            )}
-          </TabPanel>
+          </div>
+          {certificates.length > initialCertificates && (
+            <div className="mt-8 flex justify-center">
+              <ToggleButton
+                onClick={() => toggleShowMore('certificates')}
+                isShowingMore={showAllCertificates}
+              />
+            </div>
+          )}
+        </TabPanel>
 
-          <TabPanel value={value} index={2} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 lg:gap-8 gap-5 justify-items-center">
-                {techStacks.map((stack, index) => (
-                  <div
-                    key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
-                  >
-                    <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
-                  </div>
-                ))}
-              </div>
+        <TabPanel value={value} index={2}>
+          <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 lg:gap-8 gap-5 justify-items-center">
+              {techStacks.map((stack, index) => (
+                <div
+                  key={index}
+                  data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                  data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                >
+                  <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
+                </div>
+              ))}
             </div>
-          </TabPanel>
-        </SwipeableViews>
+          </div>
+        </TabPanel>
       </Box>
     </div>
   );

@@ -82,7 +82,7 @@ const Navbar = () => {
                     <a
                         href="#Home"
                         onClick={(e) => scrollToSection(e, "#Home")}
-                        className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
+                        className="text-xs font-light bg-gradient-to-r from-[#a855f7]/30 to-[#6366f1]/30 bg-clip-text text-transparent opacity-50"
                     >
                         Soham Datta
                     </a>

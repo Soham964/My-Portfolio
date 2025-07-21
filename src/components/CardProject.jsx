@@ -44,7 +44,7 @@ const CardProject = ({ Img, Video, Title, Description, Link: ProjectLink, id }) 
             </p>
             
             <div className="pt-4 flex items-center justify-between">
-              {ProjectLink ? (
+              {ProjectLink && ProjectLink.trim() !== "" && ProjectLink !== "DISABLED" ? (
                 <a
                   href={ProjectLink}
                   target="_blank"
