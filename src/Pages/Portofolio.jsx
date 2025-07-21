@@ -154,11 +154,11 @@ const staticCertificates = [
   },
   {
     id: "cert6",
-    Title: "Introduction to Generative AI",
-    PDF: "/IntroToGENAI.pdf",
+    Title: "National University of Singapore Certificate",
+    PDF: "/NUS.pdf",
     Link: "",
-    Description: "Comprehensive introduction to Generative Artificial Intelligence, covering transformer architectures, natural language processing, image generation, and ethical considerations in AI development.",
-    Date: "2024"
+    Description: "National University of Singapore certificate for advanced coursework in artificial intelligence, IoT, machine learning, and data analytics. Study abroad program completion demonstrating international academic excellence.",
+    Date: "2023"
   },
   {
     id: "cert7",
