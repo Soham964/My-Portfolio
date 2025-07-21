@@ -114,75 +114,59 @@ const techStacks = [
 const staticCertificates = [
   {
     id: "cert1",
-    Title: "My Coursera Certificate",
-    PDF: "/My_Certificate_1.pdf", // Path to your PDF in the public folder
-    Link: "https://coursera.org/share/0ea2d24072daeb249f2a357c6212cb92",
-    Description: "Successfully completed the AWS Fundamentals Specialization, gaining proficiency in essential AWS cloud concepts, services, security, and strategies for migrating and deploying applications. This specialization included courses on AWS Cloud Technical Essentials, Migrating to the AWS Cloud, and Architecting Solutions on AWS.",
-    Date: "June 2025"
+    Title: "Google Cybersecurity Professional Certificate",
+    PDF: "/GOOGLE_CYBER.pdf",
+    Link: "",
+    Description: "Google Cybersecurity Professional Certificate covering essential cybersecurity skills including threat detection, incident response, risk management, and network security. Comprehensive training in cybersecurity frameworks, tools, and best practices.",
+    Date: "2025"
   },
   {
     id: "cert2",
-    Title: "My_Certificate_2",
-    PDF: "/My_Certificate_2.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/88ed2334c45f25f741b28e82ae211ef1",
-    Description: "Completed 'Supervised Machine Learning: Regression' from IBM, covering predictive modeling, regression analysis, feature engineering, and various machine learning algorithms. Gained skills in Performance Metrics, Scikit Learn, Statistical Modeling, and Classification and Regression Trees.",
-    Date: "June 2025"
+    Title: "Google Generative AI Certificate",
+    PDF: "/GOOGLE_GENAI.pdf",
+    Link: "",
+    Description: "Google Generative AI Certificate focusing on modern AI technologies, large language models, prompt engineering, and responsible AI development. Covers practical applications of generative AI in real-world scenarios.",
+    Date: "2025"
   },
   {
     id: "cert3",
-    Title: "My_Certificate_3",
-    PDF: "/My_Certificate_3.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/6d2888e339a86c3e4be0a92e5c530936",
-    Description: "Completed 'Foundations of Cybersecurity' from Google, covering core skills and knowledge for cybersecurity analysts, security ethics, and common tools. Gained skills in Security Management, Cyber Attacks, Data Ethics, and Incident Response.",
-    Date: "March 2025"
+    Title: "IBM Artificial Intelligence Certificate",
+    PDF: "/IBM_AI.pdf",
+    Link: "",
+    Description: "IBM Artificial Intelligence Certificate covering machine learning fundamentals, neural networks, deep learning frameworks, and AI application development. Comprehensive training in AI tools and methodologies.",
+    Date: "2024"
   },
   {
     id: "cert4",
-    Title: "Introduction to the Internet of Things and Embedded Systems",
-    PDF: "/My_Certificate_4.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/69fe73e0ffc4daf0ada45c09380ee423",
-    Description: "Successfully completed 'Introduction to the Internet of Things and Embedded Systems' from the University of California, Irvine. Gained skills in Emerging Technologies, IoT, Embedded Systems, Computer Hardware, Operating Systems, Wireless Networks, and Network Protocols.",
-    Date: "March 2023"
+    Title: "IBM DevOps Certificate",
+    PDF: "/IBM_DEVOPS.pdf",
+    Link: "",
+    Description: "IBM DevOps Certificate focusing on continuous integration/continuous deployment, containerization, infrastructure automation, and modern software development practices. Covers Docker, Kubernetes, and cloud deployment strategies.",
+    Date: "2024"
   },
   {
     id: "cert5",
-    Title: "Exploratory Data Analysis for Machine Learning",
-    PDF: "/My_Certificate_5.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/398f30d9fea8137daf5d45a6e806aed1",
-    Description: "Completed 'Exploratory Data Analysis for Machine Learning' from IBM, focusing on data analysis, manipulation, quality, and statistical methods. Gained skills in Probability & Statistics, Hypothesis Testing, and using Pandas with Jupyter for EDA in Machine Learning.",
-    Date: "January 2023"
+    Title: "IBM Machine Learning Certificate",
+    PDF: "/IBM_ML.pdf",
+    Link: "",
+    Description: "IBM Machine Learning Certificate covering supervised and unsupervised learning, regression analysis, classification algorithms, model evaluation, and data preprocessing techniques. Practical experience with Python and ML libraries.",
+    Date: "2024"
   },
   {
     id: "cert6",
-    Title: "Introduction to Artificial Intelligence (AI)",
-    PDF: "/My_Certificate_6.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "https://coursera.org/share/e922456242bd55b39d61a3e52dd0a909",
-    Description: "Completed 'Introduction to Artificial Intelligence (AI)' from IBM, covering fundamental AI concepts, machine learning, deep learning, neural networks, and generative AI applications, including ethical considerations.",
-    Date: "January 2023"
+    Title: "Introduction to Generative AI",
+    PDF: "/IntroToGENAI.pdf",
+    Link: "",
+    Description: "Comprehensive introduction to Generative Artificial Intelligence, covering transformer architectures, natural language processing, image generation, and ethical considerations in AI development.",
+    Date: "2024"
   },
   {
     id: "cert7",
-    Title: "Full Stack Web Development",
-    PDF: "/My_Certificate_77.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "", // No URL provided
-    Description: "Successfully completed internship on Full Stack Web Development of 60 hours from 01/01/2025 to 30/03/2025. During the training and internship the student was found hardworking, dedicated and diligent.",
-    Date: "February 2023"
-  },
-  {
-    id: "cert8",
-    Title: "SMART Maker Festival 2023 Participation",
-    PDF: "/My_Certificate_8.pdf", // Placeholder: assuming you will upload this PDF
-    Link: "", // No URL provided
-    Description: "Participation in SMART Maker Festival 2023, organized by Society for Makers, Artists, Researchers & Technologists at IEM Management House from 14th January to 15th January 2023.",
-    Date: "January 2023"
-  },
-  {
-    id: "cert9",
-    Title: "SMART SOCIETY CERTIFICATE OF COURSE COMPLETION",
-    PDF: "/My_Certificate_9.pdf", // Updated to use PDF file
-    Link: "", // No URL provided
-    Description: "Successfully completed the Smart Society Certificate of Course Completion for the Study Abroad Program on 'Artificial Intelligence, Internet of Things, Machine Learning & Data Analytics' - Fundamentals at National University of Singapore.",
-    Date: "July 2023"
+    Title: "University of Calcutta Certificate",
+    PDF: "/UOC.pdf",
+    Link: "",
+    Description: "University of Calcutta academic certificate demonstrating successful completion of coursework in computer science and technology. Recognized qualification from one of India's premier educational institutions.",
+    Date: "2024"
   }
 ];
 
