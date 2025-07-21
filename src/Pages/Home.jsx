@@ -265,15 +265,22 @@ const Home = () => {
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <img 
-                src="/Coding.gif" 
-                alt="Coding Animation"
-                className={`w-full h-full object-contain transition-all duration-500 ${
-                  isHovering
-                    ? "scale-[110%] sm:scale-[105%] md:scale-[105%] lg:scale-[105%] rotate-1"
-                    : "scale-[100%] sm:scale-[100%] md:scale-[100%] lg:scale-[100%]"
-                }`}
-              />
+              <div className="max-w-[400px] max-h-[400px] w-full h-full">
+                <img 
+                  src="/Coding.gif" 
+                  alt="Coding Animation"
+                  className={`w-full h-full object-contain transition-all duration-500 ${
+                    isHovering
+                      ? "scale-105 rotate-1"
+                      : "scale-100"
+                  }`}
+                  style={{
+                    maxWidth: '400px',
+                    maxHeight: '400px',
+                    imageRendering: 'crisp-edges'
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
