@@ -1,3 +1,4 @@
+// Updated for Vercel deployment - Matrix Animation Portfolio
 import React, { useState, useEffect, useCallback, memo } from "react";
 import {
   Github,
