@@ -14,7 +14,7 @@ const socialLinks = [
     displayName: "Let's Connect",
     subText: "on LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/soham-datta/",
+    url: "https://www.linkedin.com/in/soham-datta-a70149246/",
     color: "#0A66C2",
     gradient: "from-[#0A66C2] to-[#0077B5]",
     isPrimary: true
@@ -49,9 +49,9 @@ const socialLinks = [
   {
     name: "GitHub",
     displayName: "Github",
-    subText: "@SohamDatta",
+    subText: "@Soham964",
     icon: Github,
-    url: "https://github.com/SohamDatta",
+    url: "https://github.com/Soham964",
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]"
   }
