@@ -103,7 +103,7 @@ const TECH_STACK = [];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Soham964" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/soham-datta-a70149246/" },
-  { icon: Instagram, link: "https://www.instagram.com/_dsoham_/" },
+  { icon: Instagram, link: "https://www.instagram.com/soham_datta/" },
 ];
 
 const Home = () => {
@@ -160,24 +160,6 @@ const Home = () => {
     );
     return () => clearTimeout(timeout);
   }, [handleTyping]);
-
-  // Lottie configuration
-  const lottieOptions = {
-    src: "https://lottie.host/58753882-bb6a-49f5-a2c0-950eda1e135a/NLbpVqGegK.lottie",
-    loop: true,
-    autoplay: true,
-    style: { width: "100%", height: "100%" },
-    className: `w-full h-full transition-all duration-500 ${
-      isHovering
-        ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
-        : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
-    }`,
-  };
-
-  const rendererSettings = {
-    preserveAspectRatio: "xMidYMid slice",
-    progressiveLoad: true,
-  };
 
   return (
     <div className="min-h-screen bg-[#030014] overflow-hidden" id="Home">
@@ -265,22 +247,16 @@ const Home = () => {
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <div className="max-w-[400px] max-h-[400px] w-full h-full">
-                <img 
-                  src="/matrix-code.png" 
-                  alt="Matrix Code Animation"
-                  className={`w-full h-full object-contain transition-all duration-500 ${
-                    isHovering
-                      ? "scale-105 rotate-1"
-                      : "scale-100"
-                  }`}
-                  style={{
-                    maxWidth: '400px',
-                    maxHeight: '400px',
-                    imageRendering: 'auto'
-                  }}
-                />
-              </div>
+              <img
+                src="/matrix-code.gif"
+                alt="Matrix Code Animation"
+                className={`w-full h-full object-cover rounded-2xl transition-all duration-500 ${
+                  isHovering
+                    ? "scale-[105%] rotate-1 shadow-2xl"
+                    : "scale-100"
+                }`}
+                style={{ maxWidth: "80%", maxHeight: "450px" }}
+              />
             </div>
           </div>
         </div>
