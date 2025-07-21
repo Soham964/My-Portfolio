@@ -224,7 +224,7 @@ export const staticProjects = [
   },
   {
     id: "3",
-    Title: "AgentX",
+    Title: "Agent77",
     Description:
       "Full-stack intelligent HR assistant that automates and simplifies the entire hiring pipeline—from sourcing to interview scheduling—using AI agents and modern web tech.",
     Img: "/AgentX_phto.png",
