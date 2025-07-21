@@ -267,8 +267,8 @@ const Home = () => {
             >
               <div className="max-w-[400px] max-h-[400px] w-full h-full">
                 <img 
-                  src="/Coding.gif" 
-                  alt="Coding Animation"
+                  src="/matrix-code.png" 
+                  alt="Matrix Code Animation"
                   className={`w-full h-full object-contain transition-all duration-500 ${
                     isHovering
                       ? "scale-105 rotate-1"
