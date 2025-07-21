@@ -191,7 +191,7 @@ export const staticProjects = [
     id: "1",
     Title: "VillageStay",
     Description: "A comprehensive hotel booking platform that connects travelers with unique village accommodations, featuring real-time availability, secure payments, and personalized recommendations.",
-    Img: "/VillageStay.jpg",
+    Img: "/VillageStay.png",
     Link: "https://villagestay.vercel.app/",
     Github: "https://github.com/SohamDatta/VillageStay",
     TechStack: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "Tailwind CSS"],
